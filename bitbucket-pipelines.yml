@@ -8,5 +8,4 @@ pipelines:
             - node
           script: # Modify the commands below to build your repository.
             - yarn install
-            - yarn build
-            - firebase deploy
+            - yarn deploy
