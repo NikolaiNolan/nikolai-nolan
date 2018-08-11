@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Nikolai Nolan</title>
+    <meta name="description" content="Web developer and design enthusiast.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#008cd2">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="<%= require('./assets/twitter.png') %>">
+    <meta name="twitter:site" content="@Nikolai">
+    <meta name="twitter:creator" content="@Nikolai">
+    <meta property="og:url" content="https://nikol.ai">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nikolai Nolan">
+    <meta property="og:image" content="<%= require('./assets/facebook.png') %>">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="626">
+    <meta property="og:description" content="Web developer and design enthusiast.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CMontserrat+Alternates:700&subset=latin">
+</head>
+
+<body>
+  <div class="frame">
+    <header class="header">
+        <%= require('./assets/logo.svg') %>
+        <h1 class="header__text">
+          <span class="header__text__inner sweep-reveal--transparent">
+            <%= 'Nikolai Nolan'.replace(/[aeft]+/gi, '<span class="alternate">$&</span>') %>
+          </span>
+        </h1>
+    </header>
+    <main class="main">
+      <ul class="icon-list">
+        <li class="icon-list__item icon-list__item--red">
+          <div class="icon-list__icon">
+            <%= require('./assets/hexagon.svg') %>
+            <%= require('material-design-icons/communication/svg/production/ic_contacts_24px.svg') %>
+          </div>
+          <div class="icon-list__text">
+            Web&nbsp;developer and design&nbsp;enthusiast
+          </div>
+        </li>
+        <li class="icon-list__item icon-list__item--green">
+          <div class="icon-list__icon">
+            <%= require('./assets/hexagon.svg') %>
+            <%= require('material-design-icons/action/svg/production/ic_code_24px.svg') %>
+          </div>
+          <div class="icon-list__text">
+            React, Vue.js, AngularJS, ES6, JavaScript, Sass, CSS, HTML, Firebase,&nbsp;PHP
+          </div>
+        </li>
+        <li class="icon-list__item icon-list__item--purple">
+          <div class="icon-list__icon">
+            <%= require('./assets/hexagon.svg') %>
+            <%= require('material-design-icons/action/svg/production/ic_favorite_24px.svg') %>
+          </div>
+          <div class="icon-list__text">
+            Anime, board&nbsp;games, conventions, malls, improv&nbsp;comedy, maps, Google,&nbsp;cherry&nbsp;cola
+          </div>
+        </li>
+        <li class="icon-list__item icon-list__item--orange">
+          <div class="icon-list__icon">
+            <%= require('./assets/hexagon.svg') %>
+            <%= require('material-design-icons/social/svg/production/ic_public_24px.svg') %>
+          </div>
+          <div class="icon-list__text">
+            Madison, Wisconsin
+          </div>
+        </li>
+      </ul>
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a href="https://www.facebook.com/nikolain" title="Facebook" class="social-list__link social-list__link--facebook">
+            <%= require('./assets/social-list/facebook.svg') %>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a href="https://www.linkedin.com/in/nikolain/" title="LinkedIn" class="social-list__link social-list__link--linkedin">
+            <%= require('./assets/social-list/linkedin.svg') %>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a href="https://twitter.com/Nikolai" title="Twitter" class="social-list__link social-list__link--twitter">
+            <%= require('./assets/social-list/twitter.svg') %>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a href="mailto:whistle@nikol.ai" title="E-Mail" class="social-list__link">
+            <%= require('material-design-icons/communication/svg/production/ic_email_24px.svg') %>
+          </a>
+        </li>
+      </ul>
+    </main>
+  </div>
+  <div class="hexagon-shade">
+    <%= require('./assets/hexagon.svg') %>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,286 @@
+@mixin absolute-center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin size($value...) {
+  $width: nth($value, 1);
+  $height: $width;
+
+  @if length($value) > 1 {
+    $height: nth($value, 2);
+  }
+
+  height: $height;
+  width: $width;
+}
+
+@mixin generated-block($placement: after, $display: inline-block) {
+  &::#{$placement} {
+    content: '';
+    display: $display;
+
+    @content;
+  }
+}
+
+@mixin min-width($breakpoint) {
+  @media (min-width: if(map-get($breakpoints, $breakpoint), map-get($breakpoints, $breakpoint), $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin min-size($breakpoint) {
+  @media (min-width: if(map-get($breakpoints, $breakpoint), map-get($breakpoints, $breakpoint), $breakpoint)) and (min-height: if(map-get($breakpoints, $breakpoint), map-get($breakpoints, $breakpoint), $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin max-width($breakpoint) {
+  @media (max-width: if(map-get($breakpoints, $breakpoint), map-get($breakpoints, $breakpoint) - 1, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin max-size($breakpoint) {
+  @media (max-width: if(map-get($breakpoints, $breakpoint), map-get($breakpoints, $breakpoint) - 1, $breakpoint)), (max-height: if(map-get($breakpoints, $breakpoint), map-get($breakpoints, $breakpoint) - 1, $breakpoint)) {
+    @content;
+  }
+}
+
+$blue: #008cd2;
+$light-blue: #00aee4;
+$red: #c20839;
+$light-red: #eb1755;
+$green: #00a532;
+$light-green: #00c789;
+$purple: #935782;
+$light-purple: #b18fac;
+$orange: #dd731d;
+$light-orange: #fd8713;
+
+$frame-padding: 5vmin;
+
+@mixin hexagon-size {
+  width: 6rem;
+  height: 6.93rem;
+
+  @include min-size(sm) {
+    width: 12rem;
+    height: 13.86rem;
+  }
+}
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+html { height: 100%; }
+
+body {
+  flex: 1;
+  display: flex;
+  margin: 0;
+  min-height: 100%;
+  color: white;
+  font-family: Montserrat, sans-serif;
+  line-height: 1.4;
+}
+
+.frame {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: {
+    image: url('../assets/background.jpg');
+    position: 90% top;
+    size: cover;
+  }
+
+  @include generated-block(before) {
+    flex: 1;
+    padding-top: $frame-padding;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+
+  @include max-size(sm) {
+    margin: {
+      left: $frame-padding;
+      right: $frame-padding;
+      bottom: 1rem;
+    }
+  }
+
+  @include min-size(sm) {
+    flex-direction: row-reverse;
+
+    @include generated-block(before) { flex: 1; }
+  }
+
+  &__logo { @include hexagon-size(); }
+
+  &__text {
+    flex: 1;
+    margin: 0;
+    font-size: 2.5rem;
+    line-height: 1;
+    text: {
+      transform: lowercase;
+      shadow: 0 0 2em black;
+    }
+
+    @include min-size(sm) {
+      font-size: 3.5rem;
+      text-align: right;
+    }
+  }
+
+  &__text__inner {
+    display: inline-block;
+    margin: 0 1rem;
+
+    @include min-size(sm) {
+      margin-left: $frame-padding;
+      margin-right: .33em;
+    }
+  }
+}
+
+.alternate { font-family: 'Montserrat Alternates', sans-serif; }
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: $frame-padding;
+  min: {
+    height: 18.85rem;
+    height: fit-content;
+  }
+
+  @include max-width(sm) { background-image: linear-gradient(transparent, black); }
+}
+
+.icon-list {
+  @include list-reset;
+
+  &__item {
+    flex-shrink: 0;
+    display: flex;
+    padding: 0 $frame-padding;
+    max-width: 25rem;
+
+    & ~ & { margin-top: 1rem; }
+
+    .hexagon { @include size(100%); }
+    &--red .hexagon { fill: $red; }
+    &--green .hexagon { fill: $green; }
+    &--purple .hexagon { fill: $purple; }
+    &--orange .hexagon { fill: $orange; }
+  }
+
+  &__icon {
+    @include size(3rem, 3.46rem);
+
+    flex-shrink: 0;
+    position: relative;
+    margin-right: .75rem;
+
+    svg {
+      @include absolute-center();
+      @include size(1.5rem);
+
+      fill: currentColor;
+    }
+  }
+
+  &__text {
+    align-self: center;
+    text-shadow: 0 0 2em black;
+  }
+}
+
+.social-list {
+  @include list-reset;
+
+  display: flex;
+  justify-content: flex-end;
+  margin: {
+    left: auto;
+    bottom: -.5rem;
+  }
+
+  padding-right: calc(#{$frame-padding} - .5rem);
+
+  &__link {
+    display: block;
+    padding: .5rem;
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      color: $light-blue;
+    }
+
+    &--facebook:hover,
+    &--facebook:focus {
+      color: #3b5998;
+    }
+
+    &--linkedin:hover,
+    &--linkedin:focus {
+      color: #0077b5;
+    }
+
+    &--twitter:hover,
+    &--twitter:focus {
+      color: #0084b4;
+    }
+  }
+
+  svg {
+    @include size(1.5rem);
+
+    display: block;
+    fill: currentColor;
+  }
+}
+
+.hexagon-shade {
+  @include absolute-center();
+
+  position: fixed;
+  background-color: white;
+  pointer-events: none;
+
+  .hexagon {
+    @include absolute-center();
+    @include hexagon-size();
+
+    fill: white;
+
+    &--color-1 { fill: $blue; }
+    &--color-2 { fill: $light-blue; }
+  }
+}
