@@ -106,11 +106,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  background: {
-    image: url('../assets/background.jpg');
-    position: 90% top;
-    size: cover;
-  }
+  overflow: hidden;
 
   @include generated-block(before) {
     flex: 1;
@@ -264,6 +260,18 @@ body {
 
     display: block;
     fill: currentColor;
+  }
+}
+
+
+.background {
+  @include absolute-center;
+  @include size(100%);
+
+  z-index: -1;
+  object: {
+    fit: cover;
+    position: 90% top;
   }
 }
 
