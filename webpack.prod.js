@@ -115,7 +115,7 @@ module.exports = {
         windows: false,
       }
   }),
-    new ExtractTextPlugin('styles.[contentHash].css', {
+    new ExtractTextPlugin('styles.[hash].css', {
       allChunks: true,
     }),
     new OptimizeCssAssetsPlugin({
