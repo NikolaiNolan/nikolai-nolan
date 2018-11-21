@@ -61,6 +61,9 @@ module.exports = {
       {
         test: /\.svg$/,
         loader: 'svg-inline-loader',
+        options: {
+          removingTagAttrs: ['xmlns']
+        }
       },
       {
         test: /\.ya?ml$/,
