@@ -26,6 +26,23 @@
 
 <body>
   <div class="frame">
+    <picture class="background">
+      <source srcset="
+        <%= require('./assets/background/2880.webp') %> 2880w,
+        <%= require('./assets/background/2400.webp') %> 2400w,
+        <%= require('./assets/background/1920.webp') %> 1920w,
+        <%= require('./assets/background/1440.webp') %> 1440w,
+        <%= require('./assets/background/960.webp') %> 960w
+      " type="image/webp">
+      <source srcset="
+        <%= require('./assets/background/2880.jpg') %> 2880w,
+        <%= require('./assets/background/2400.jpg') %> 2400w,
+        <%= require('./assets/background/1920.jpg') %> 1920w,
+        <%= require('./assets/background/1440.jpg') %> 1440w,
+        <%= require('./assets/background/960.jpg') %> 960w
+      " type="image/jpeg">
+      <img src="<%= require('./assets/background/1920.jpg') %>" alt="" class="background">
+    </picture>
     <header class="header">
         <%= require('./assets/logo.svg') %>
         <h1 class="header__text">
@@ -96,7 +113,6 @@
         </li>
       </ul>
     </main>
-    <img src="<%= require('./assets/background.jpg') %>" alt="" class="background">
   </div>
   <div class="hexagon-shade">
     <%= require('./assets/hexagon.svg') %>
