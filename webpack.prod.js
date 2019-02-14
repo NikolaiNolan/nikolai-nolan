@@ -66,6 +66,20 @@ module.exports = {
         }
       },
       {
+        test: /\.woff?$/,
+        loader: 'file-loader',
+        options: {
+          name: './fonts/[name].[ext]',
+        },
+      },
+      {
+        test: /\.woff2?$/,
+        loader: 'file-loader',
+        options: {
+          name: './fonts/[name].[ext]',
+        },
+      },
+      {
         test: /\.ya?ml$/,
         loader: ['json-loader', 'js-yaml-loader'],
       },

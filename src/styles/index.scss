@@ -89,6 +89,48 @@ $breakpoints: (
   xl: 1200px
 );
 
+@font-face {
+  font: {
+    family: 'Montserrat';
+    style: normal;
+    weight: 400;
+    display: fallback;
+  }
+
+  src: local('Montserrat Regular'),
+    local('Montserrat-Regular'),
+    url('../assets/fonts/montserrat.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../assets/fonts/montserrat.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font: {
+    family: 'Montserrat';
+    style: normal;
+    weight: 700;
+    display: fallback;
+  }
+
+  src: local('Montserrat Bold'),
+    local('Montserrat-Bold'),
+    url('../assets/fonts/montserrat-bold-iklno.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../assets/fonts/montserrat-bold-iklno.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font: {
+    family: 'Montserrat Alternates';
+    style: normal;
+    weight: 700;
+    display: fallback;
+  }
+
+  src: local('Montserrat Alternates Bold'),
+    local('MontserratAlternates-Bold'),
+    url('../assets/fonts/montserrat-alternates-a.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../assets/fonts/montserrat-alternates-a.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 html { height: 100%; }
 
 body {
@@ -97,7 +139,7 @@ body {
   margin: 0;
   min-height: 100%;
   color: white;
-  font-family: Montserrat, sans-serif;
+  font-family: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   line-height: 1.4;
 }
 
@@ -161,7 +203,7 @@ body {
   }
 }
 
-.alternate { font-family: 'Montserrat Alternates', sans-serif; }
+.alternate { font-family: 'Montserrat Alternates', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; }
 
 .main {
   flex: 1;
