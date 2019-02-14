@@ -1,6 +1,7 @@
 const path = require('path');
 
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const RobotstxtPlugin = require("robotstxt-webpack-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin'); // installed via npm
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -131,7 +132,8 @@ module.exports = {
         yandex: false,
         windows: false,
       }
-  }),
+    }),
+    new RobotstxtPlugin(),
     new ExtractTextPlugin('styles.[hash].css', {
       allChunks: true,
     }),
