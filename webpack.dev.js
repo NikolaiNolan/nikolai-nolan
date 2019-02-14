@@ -66,14 +66,14 @@ module.exports = {
         test: /\.woff?$/,
         loader: 'file-loader',
         options: {
-          name: './fonts/[name].[ext]',
+          name: './fonts/[name].[hash:20].[ext]',
         },
       },
       {
         test: /\.woff2?$/,
         loader: 'file-loader',
         options: {
-          name: './fonts/[name].[ext]',
+          name: './fonts/[name].[hash:20].[ext]',
         },
       },
       {
