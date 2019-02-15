@@ -211,6 +211,7 @@ body {
     margin: 0;
     font-size: 2.5rem;
     line-height: 1;
+    letter-spacing: -.01em;
     text: {
       transform: lowercase;
       shadow: 0 0 2em black;
@@ -225,6 +226,7 @@ body {
   &__text__inner {
     display: inline-block;
     margin: 0 1rem;
+    padding-right: .01em;
 
     @include min-size(sm) {
       margin-left: $frame-padding;
