@@ -310,21 +310,6 @@ body {
     &:focus {
       color: $light-blue;
     }
-
-    &--facebook:hover,
-    &--facebook:focus {
-      color: #3b5998;
-    }
-
-    &--linkedin:hover,
-    &--linkedin:focus {
-      color: #0077b5;
-    }
-
-    &--twitter:hover,
-    &--twitter:focus {
-      color: #0084b4;
-    }
   }
 
   svg {
