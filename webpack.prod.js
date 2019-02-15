@@ -6,6 +6,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin'); // installed via npm
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin');
 
 const buildPath = path.resolve(__dirname, 'dist');
 
@@ -145,5 +146,6 @@ module.exports = {
         },
       },
     }),
+    new StyleExtHtmlWebpackPlugin(),
   ],
 };

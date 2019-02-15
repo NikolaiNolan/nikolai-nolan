@@ -25,7 +25,8 @@
         "ganalytics": "^3.0.0",
         "gsap": "^1.20.4",
         "lodash": "^4.17.5",
-        "material-design-icons": "^3.0.1"
+        "material-design-icons": "^3.0.1",
+        "style-ext-html-webpack-plugin": "^4.0.1"
     },
     "devDependencies": {
         "ajv": "^6.3.0",

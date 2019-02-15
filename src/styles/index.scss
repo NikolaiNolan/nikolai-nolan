@@ -143,6 +143,25 @@ body {
   line-height: 1.4;
 }
 
+.hexagon-shade {
+  @include absolute-center();
+
+  position: fixed;
+  z-index: 1;
+  background-color: white;
+  pointer-events: none;
+
+  .hexagon {
+    @include absolute-center();
+    @include hexagon-size();
+
+    fill: white;
+
+    &--color-1 { fill: $blue; }
+    &--color-2 { fill: $light-blue; }
+  }
+}
+
 .frame {
   flex: 1;
   display: flex;
@@ -153,6 +172,17 @@ body {
   @include generated-block(before) {
     flex: 1;
     padding-top: $frame-padding;
+  }
+}
+
+.background {
+  @include absolute-center;
+  @include size(100%);
+
+  z-index: -1;
+  object: {
+    fit: cover;
+    position: 90% top;
   }
 }
 
@@ -302,35 +332,5 @@ body {
 
     display: block;
     fill: currentColor;
-  }
-}
-
-
-.background {
-  @include absolute-center;
-  @include size(100%);
-
-  z-index: -1;
-  object: {
-    fit: cover;
-    position: 90% top;
-  }
-}
-
-.hexagon-shade {
-  @include absolute-center();
-
-  position: fixed;
-  background-color: white;
-  pointer-events: none;
-
-  .hexagon {
-    @include absolute-center();
-    @include hexagon-size();
-
-    fill: white;
-
-    &--color-1 { fill: $blue; }
-    &--color-2 { fill: $light-blue; }
   }
 }
