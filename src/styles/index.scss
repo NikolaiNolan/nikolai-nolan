@@ -222,10 +222,7 @@ body {
     font-size: 2.5rem;
     line-height: 1;
     letter-spacing: -.01em;
-    text: {
-      transform: lowercase;
-      shadow: 0 0 2em black;
-    }
+    text-transform: lowercase;
 
     @include min-size(sm) {
       font-size: 3.5rem;
@@ -235,6 +232,7 @@ body {
 
   &__text__inner {
     display: inline-block;
+    position: relative;
     margin: 0 1rem;
     padding-right: .01em;
 
@@ -242,6 +240,14 @@ body {
       margin-left: $frame-padding;
       margin-right: .33em;
     }
+  }
+
+  &__text__shadow {
+    @include absolute-center();
+
+    z-index: -1;
+    color: transparent;
+    text-shadow: 0 0 2em black;
   }
 }
 
