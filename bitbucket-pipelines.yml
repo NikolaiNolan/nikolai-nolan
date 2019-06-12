@@ -6,6 +6,11 @@ pipelines:
       - step:
           caches:
             - node
-          script: # Modify the commands below to build your repository.
+            - firebase-hosting
+          script:
             - yarn install
             - yarn deploy
+
+definitions:
+  caches:
+    firebase-hosting: .firebase
