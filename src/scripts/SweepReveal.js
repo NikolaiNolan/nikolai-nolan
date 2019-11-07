@@ -23,8 +23,8 @@ export default (timeline, elementParam, color, position) => {
       position: 'absolute',
       left: `${window.pageXOffset + element.getBoundingClientRect().left}px`,
       top: `${window.pageYOffset + element.getBoundingClientRect().top}px`,
-      width: `${element.offsetWidth}px`,
-      height: `${element.offsetHeight}px`,
+      width: `${element.getBoundingClientRect().width}px`,
+      height: `${element.getBoundingClientRect().height}px`,
       backgroundColor: color,
       transformOrigin: 'left',
     });
