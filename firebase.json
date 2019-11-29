@@ -6,16 +6,6 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "rewrites": [
-      {
-        "source": "robots.txt",
-        "destination": "/robots.txt"
-      },
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ],
     "headers": [
       {
         "source" : "**/*.@(js|css|woff|woff2|jpg|jpeg|webp|gif|png|svg)",
