@@ -7,6 +7,14 @@ import HexagonShade from './scripts/HexagonShade';
 import SweepReveal from './scripts/SweepReveal';
 import ZoomFrom from './scripts/ZoomFrom';
 
+if (/^\?feature=/.test(window.location.search)) {
+  const destination = window.location.search.slice(9);
+  if (/^awards/.test(destination)) window.location.replace(`https://${destination.slice(6)}.bloggi.es/`);
+  if (destination === 'sxsw2000') window.location.replace('https://www.facebook.com/media/set/?set=a.10102497698848303&type=1&l=6ffd4105b1');
+  if (destination === 'sxsw2001') window.location.replace('https://www.facebook.com/media/set/?set=a.10102869300071473&type=1&l=6ffd4105b1');
+  if (destination === 'smc2000') window.location.replace('https://www.facebook.com/media/set/?set=a.10101944997491253&type=1&l=d4ae75ad6a');
+}
+
 const timeline = new TimelineLite();
 
 HexagonShade(timeline);
