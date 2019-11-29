@@ -1,12 +1,13 @@
 const path = require('path');
 
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-const RobotstxtPlugin = require("robotstxt-webpack-plugin");
+const RobotstxtPlugin = require('robotstxt-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin'); // installed via npm
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const buildPath = path.resolve(__dirname, 'dist');
 
@@ -64,8 +65,8 @@ module.exports = {
         test: /\.svg$/,
         loader: 'svg-inline-loader',
         options: {
-          removingTagAttrs: ['xmlns']
-        }
+          removingTagAttrs: ['xmlns'],
+        },
       },
       {
         test: /\.woff?$/,
@@ -102,7 +103,7 @@ module.exports = {
         removeStyleLinkTypeAttributes: true,
         sortAttributes: true,
         sortClassName: true,
-      }
+      },
     }),
     new CleanWebpackPlugin(buildPath),
     new FaviconsWebpackPlugin({
@@ -132,7 +133,7 @@ module.exports = {
         twitter: false,
         yandex: false,
         windows: false,
-      }
+      },
     }),
     new RobotstxtPlugin(),
     new ExtractTextPlugin('styles.[hash].css', {
@@ -147,5 +148,8 @@ module.exports = {
       },
     }),
     new StyleExtHtmlWebpackPlugin(),
+    new CopyPlugin([
+      { from: './src/original', to: 'original' },
+    ]),
   ],
 };
