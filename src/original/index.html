@@ -2,16 +2,16 @@
 <TITLE>"Malls"</TITLE> <head><SCRIPT>
 <!--
 // JS-counter Ver 1.0
-// Copyright(c) by Gaku UEDA 
-// 
+// Copyright(c) by Gaku UEDA
+//
 // Permission is granted to copy and distribute this file in modified
 // or unmodified form, for noncommercial use, provided
 //  (a) this copyright notice is preserved.
-//  (b) you are non-smoker or you stop smoking. 
+//  (b) you are non-smoker or you stop smoking.
 //
 // This program is distributed WITHOUT ANY WARRANTY.
 // You can get original package at
-// http://www.ueda.info.waseda.ac.jp/~gaku/js_counter/ 
+// http://www.ueda.info.waseda.ac.jp/~gaku/js_counter/
 
 message = "                    Welcome to ''Malls,'' my collection of mall directories. (Isn't this scrolling message cool?) I finally got the images to upload correctly, so soon the directories will be here. Meanwhile, I made the ratings, which are located near the top of the list. Thanks for coming to this page, and return soon!"; // Display test.
 version = "JS-counter Ver 1.0"
@@ -24,11 +24,11 @@ head = "";
 tail = "";
 
 function scroll_disp() {
-        ctime++; 
+        ctime++;
         if (ctime < message.length * n) {
                 setTimeout('scroll_disp()', msec);
                 head = message.substring(1, message.length);
-                tail = message.substring(0, 1); 
+                tail = message.substring(0, 1);
                 message = head + tail;
                 w.defaultStatus = message;
         } else {
@@ -63,7 +63,7 @@ Southland Center, Taylor, Mi.<BR>
 Tel-Twelve Mall, Southfield, Mi.<BR>
 Twelve Oaks, Novi, Mi.<BR>
 Westland Shopping Center, Westland, Mi.<BR>
-<A HREF="javascript:alert('This may appear like a working link, but it never was. I don\'t remember why I left it this way.');">Westwood Mall</A>, Marquette, Mi.<BR>
+Westwood Mall, Marquette, Mi.<BR>
 Wonderland Mall, Livonia, Mi.<BR>
 Woodfield, Schaumburg, Il. <IMG SRC="new.gif"><BR><BR>
 <HR SIZE=3>
