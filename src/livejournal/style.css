@@ -1,0 +1,358 @@
+* {
+margin: 0;
+padding: 0;
+outline: none;
+list-style: none;
+}
+body {
+padding: 25px;
+background: #fff url(https://nikol.ai/livejournal/background.png) fixed 50% 50%;
+font: 14px/1.25em "Segoe UI", "Microsoft Sans Serif", "Lucida Sans Unicode", sans-serif;
+color: #000;
+}
+a {
+color: #c00;
+text-decoration: none;
+}
+a:hover {
+background-color: #fc0;
+color: #000;
+}
+#banner-header {
+margin: 0 auto -482px;
+width: 982px;
+height: 482px;
+background: url(https://nikol.ai/livejournal/title.png) no-repeat;
+text-indent: -9999px;
+}
+*>#banner-header {
+width: auto;
+max-width: 982px;
+}
+.module-photo, .module-calendar, .module-typelist, .module-syndicate, .module-powered, #gamma {
+display: none;
+}
+.module-viewlinks {
+margin: 0 auto 1.18em;
+padding-left: 86px;
+width: 896px;
+height: 1.5em;
+font-size: .85em;
+text-transform: lowercase;
+line-height: 1.2em;
+}
+*>.module-viewlinks {
+width: auto;
+max-width: 896px;
+}
+.module-viewlinks div {
+overflow: hidden;
+}
+.module-viewlinks ul {
+display: inline;
+float: left;
+margin-left: -1px;
+background: #095 url(https://nikol.ai/livejournal/green.jpg) 100% 0 no-repeat;
+}
+.module-viewlinks li {
+float: left;
+border-left: 1px dashed #084;
+width: 10em;
+}
+.module-viewlinks a {
+display: block;
+padding: 1px 8px 3px;
+color: #eee;
+}
+.module-viewlinks a:hover {
+color: #000;
+}
+.lj-view-recent .module-viewlinks a[href="http://nikolai.livejournal.com/"], .lj-view-entry .module-viewlinks a[href="http://nikolai.livejournal.com/"], .lj-view-reply .module-viewlinks a[href="http://nikolai.livejournal.com/"], .lj-view-archive .module-viewlinks a[href="http://nikolai.livejournal.com/calendar"], .lj-view-friends .module-viewlinks a[href="http://nikolai.livejournal.com/friends"] {
+background: #06c url(https://nikol.ai/livejournal/blue.jpg) 100% 0 no-repeat;
+}
+.lj-view-recent .module-viewlinks a[href="http://nikolai.livejournal.com/"]:hover, .lj-view-entry .module-viewlinks a[href="http://nikolai.livejournal.com/"]:hover, .lj-view-reply .module-viewlinks a[href="http://nikolai.livejournal.com/"]:hover, .lj-view-archive .module-viewlinks a[href="http://nikolai.livejournal.com/calendar"]:hover, .lj-view-friends .module-viewlinks a[href="http://nikolai.livejournal.com/friends"]:hover {
+color: #eee;
+cursor: default;
+}
+#beta {
+position: relative;
+margin: 0 auto;
+padding: 0 170px 0 212px;
+width: 600px;
+}
+*>#beta {
+width: auto;
+max-width: 600px;
+}
+.entry, .comment {
+position: relative;
+margin-top: 1em;
+padding-bottom: 1em;
+border-bottom: 1px dashed #ccc;
+}
+.entry {
+clear: right;
+height: 14em;
+}
+*>.entry {
+height: auto;
+min-height: 14em;
+}
+.comment .comment {
+border-bottom: none;
+}
+.comment-content {
+height: 80px;
+}
+*>.comment-content {
+height: auto;
+min-height: 80px;
+}
+.date-header {
+margin: .29em 0;
+padding-right: 5px;
+font-family: Corbel, "Trebuchet MS", Trebuchet, sans-serif;
+font-size: 3.5em;
+line-height: .7em;
+letter-spacing: -5px;
+text-transform: uppercase;
+text-align: right;
+}
+.entry-userpic, .comment-userpic, .lj-view-reply img[width="100"] {
+position: absolute;
+left: -126px;
+top: 0;
+padding: 3px;
+width: 100px;
+height: 100px;
+background-color: #06c;
+text-align: center;
+}
+.lj-view-reply #beta img[width="100"] {
+left: 10085px;
+}
+.lj-view-reply #beta tr[valign="middle"] td {
+position: absolute;
+left: -9999px;
+top: 0;
+}
+.lj-view-reply #beta tr tr[valign="middle"] td {
+position: static;
+}
+.lj-view-reply #beta td {
+padding-bottom: 1em;
+}
+.lj-view-reply #beta td td {
+padding-bottom: 0;
+}
+.ljuser {
+background: url(https://nikol.ai/livejournal/user.png) 5px 50% no-repeat;
+}
+.ljuser img {
+display: none;
+}
+.ljuser b {
+font-weight: normal;
+}
+.entry-header .ljuser b {
+font-weight: bold;
+}
+.poster, .lj-view-reply #beta tr[valign="middle"] .ljuser {
+position: absolute;
+left: 0px;
+top: 106px;
+width: 106px;
+color: #06c;
+font-size: .85em;
+line-height: 1.25em;
+text-align: left;
+}
+.lj-view-reply #beta tr[valign="middle"] .ljuser {
+left: 10085px;
+}
+.poster .ljuser, .lj-view-reply #beta tr[valign="middle"] .ljuser {
+background-image: none;
+}
+.poster a, .lj-view-reply #beta tr[valign="middle"] .ljuser a {
+color: #06c;
+}
+.poster a:hover, .lj-view-reply #beta tr[valign="middle"] .ljuser a:hover {
+color: #000;
+}
+.poster b {
+font-weight: normal;
+}
+.entry-header, .lj-view-reply #beta h2 {
+margin: 0 0 .67em;
+color: #095;
+font-family: Corbel, "Trebuchet MS", Trebuchet, sans-serif;
+font-size: 1.5em;
+line-height: 1em;
+letter-spacing: -1px;
+text-transform: lowercase;
+text-align: left;
+}
+.subj-link {
+color: #095;
+}
+.comments-header {
+margin-top: .67em;
+}
+.lj-entry-securityicon img {
+position: absolute;
+left: -40px;
+top: 6px;
+}
+.metadata {
+position: absolute;
+right: -170px;
+top: 0;
+width: 150px;
+font-size: .85em;
+line-height: 1.25em;
+}
+.metadata strong, .lj-view-reply #beta td[align="right"] {
+color: #06c;
+font-family: Corbel, "Trebuchet MS", Trebuchet, sans-serif;
+font-size: 1em;
+font-weight: bold;
+text-transform: lowercase;
+}
+.metadata img {
+display: none;
+}
+.entry-body b a {
+color: #06c;
+}
+.entry-body b a:hover {
+color: #000;
+}
+.entry-body img {
+max-width: 594px;
+border: 3px solid #000;
+}
+.entry-body a img {
+border-color: #c00;
+}
+.entry-body a:hover img {
+border-color: #000;
+}
+.entry-body span img {
+border: none;
+}
+u {
+font-variant: small-caps;
+text-decoration: none;
+}
+s, strike {
+color: #ccc;
+text-decoration: none;
+}
+.ljtags, .entry-footer, .comment-footer, .content-nav {
+margin-top: 1.35em;
+font-size: .75em;
+line-height: 1.5em;
+text-align: right;
+}
+.ljtags {
+color: #fff;
+}
+.entry-footer, .comment-footer, .content-nav {
+letter-spacing: 1px;
+text-transform: uppercase;
+}
+.entry-footer .separator {
+display: block;
+height: 0;
+overflow: hidden;
+}
+.comment-footer .separator {
+display: none;
+}
+.entry-footer {
+position: absolute;
+right: -170px;
+bottom: 1.35em;
+width: 150px;
+line-height: 1.35em;
+text-align: left;
+}
+.content-nav {
+display: inline;
+float: right;
+margin: 0 -170px 25px 0;
+width: 150px;
+text-align: left;
+}
+.ljtags a, .entry-footer a, .comment-footer a, .content-nav a {
+margin: -0.2em;
+padding: .2em;
+color: #095;
+white-space: nowrap;
+}
+.entry-footer a {
+white-space: normal;
+}
+.comment-footer a {
+margin-left: 0.2em;
+}
+.content-nav a {
+color: #c00;
+}
+.ljtags a:hover, .entry-footer a:hover, .comment-footer a:hover, .content-nav a:hover {
+color: #000;
+}
+.comment-replies {
+margin-left: 50px;
+}
+.comment-replies .comment-replies .comment-replies .comment-replies .comment-replies .comment-replies .comment-replies {
+margin-left: 5px;
+}
+*>input, *>select, *>textarea {
+margin: 1px 0;
+border: none;
+border-bottom: 1px dashed #000;
+max-width: 530px;
+background-color: #eee;
+font-size: .9em;
+font-family: "Segoe Print", "Segoe Script", "Comic Sans MS", cursive;
+}
+*>input, *>textarea {
+line-height: 1.25em;
+}
+select+.helplink {
+margin-right: 100px;
+}
+*>input:focus, *>select:focus, *>textarea:focus {
+background-color: #ffd;
+}
+*>input[type="radio"], *>input[type="checkbox"] {
+border-bottom: none;
+background: transparent;
+}
+*>input[type="button"], *>input[type="submit"] {
+padding: .25em;
+border: none;
+width: auto;
+overflow: visible;
+background: #c00 url(https://nikol.ai/livejournal/red.jpg) no-repeat 50% 50%;
+color: #eee;
+font-size: .8em;
+font-family: "Segoe UI", "Microsoft Sans Serif", "Lucida Sans Unicode";
+letter-spacing: 1px;
+text-transform: uppercase;
+cursor: pointer;
+}
+*>input[type="button"] {
+background: #095 url(https://nikol.ai/livejournal/green.jpg) no-repeat 50% 50%;
+}
+hr {
+margin: 1em 0;
+border: none;
+border-bottom: 1px dashed #ccc;
+height: 0;
+}
+hr+a {
+color: #06c;
+font-weight: bold;
+}

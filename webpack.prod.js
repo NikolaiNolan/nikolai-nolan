@@ -149,6 +149,7 @@ module.exports = {
     }),
     new StyleExtHtmlWebpackPlugin(),
     new CopyPlugin([
+      { from: './src/livejournal', to: 'livejournal' },
       { from: './src/original', to: 'original' },
     ]),
   ],
