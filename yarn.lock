@@ -7817,6 +7817,11 @@ phin@^2.9.1:
   resolved "https://registry.yarnpkg.com/phin/-/phin-2.9.3.tgz#f9b6ac10a035636fb65dfc576aaaa17b8743125c"
   integrity sha512-CzFr90qM24ju5f88quFC/6qohjC144rehe5n6DH900lgXmUe86+xCKc10ev56gRKC4/BkHUoG4uSiQgBiIXwDA==
 
+phonetic@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/phonetic/-/phonetic-0.1.1.tgz#42cf97f15d03b0c99f26d5223590a323699bee2f"
+  integrity sha1-Qs+X8V0DsMmfJtUiNZCjI2mb7i8=
+
 picomatch@^2.0.4, picomatch@^2.0.7:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.2.1.tgz#21bac888b6ed8601f831ce7816e335bc779f0a4a"

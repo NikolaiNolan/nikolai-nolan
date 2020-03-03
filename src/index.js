@@ -1,6 +1,7 @@
 import GAnalytics from 'ganalytics';
 /* global TimelineLite */
 import 'gsap/TimelineLite';
+import { generate } from 'phonetic';
 
 import './styles/index.scss';
 import HexagonShade from './scripts/HexagonShade';
@@ -14,6 +15,12 @@ if (/^\?feature=/.test(window.location.search)) {
   if (destination === 'sxsw2001') window.location.replace('https://www.facebook.com/media/set/?set=a.10102869300071473&type=1&l=6ffd4105b1');
   if (destination === 'smc2000') window.location.replace('https://www.facebook.com/media/set/?set=a.10101944997491253&type=1&l=d4ae75ad6a');
 }
+
+const todaysWord = generate({
+  seed: new Date().setUTCHours(0, 0, 0, 0),
+  capFirst: false,
+});
+document.querySelector('.email-link').href = `mailto:${todaysWord}@nikol.ai`;
 
 const timeline = new TimelineLite();
 
