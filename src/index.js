@@ -1,4 +1,3 @@
-import GAnalytics from 'ganalytics';
 /* global TimelineLite */
 import 'gsap/TimelineLite';
 import { generate } from 'phonetic';
@@ -36,5 +35,3 @@ SweepReveal(timeline, '.icon-list__item--orange', '#dd731d', '-=0.375');
 SweepReveal(timeline, '.social-list', '#008cd2', '-=0.375');
 
 ZoomFrom(timeline, '.background', `${(1513 / 1920) * 100}% ${(153 / 1440) * 100}%`, '-=4.25');
-
-new GAnalytics('G-T701KHFQNH'); // eslint-disable-line no-new
