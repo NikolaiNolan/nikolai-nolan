@@ -115,30 +115,15 @@ $breakpoints: (
 
 @font-face {
   font: {
-    family: 'Montserrat';
+    family: 'Galano Grotesque';
     style: normal;
     weight: 700;
     display: fallback;
   }
 
-  src: local('Montserrat Bold'),
-    local('Montserrat-Bold'),
-    url('../assets/fonts/montserrat-bold-iklno.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url('../assets/fonts/montserrat-bold-iklno.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-@font-face {
-  font: {
-    family: 'Montserrat Alternates';
-    style: normal;
-    weight: 700;
-    display: fallback;
-  }
-
-  src: local('Montserrat Alternates Bold'),
-    local('MontserratAlternates-Bold'),
-    url('../assets/fonts/montserrat-alternates-a.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url('../assets/fonts/montserrat-alternates-a.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local('Galano Grotesque Bold'),
+    local('GalanoGrotesque-Bold'),
+    url('../assets/fonts/galano-grotesque-700.woff2') format('woff2');
 }
 
 html { height: 100%; }
@@ -219,12 +204,13 @@ body {
   &__text {
     flex: 1;
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2.75rem;
+    font-family: 'Galano Grotesque', Montserrat, $font-stack-system, sans-serif;
     line-height: 1;
-    letter-spacing: -.03em;
+    letter-spacing: -.02em;
 
     @include min-size(sm) {
-      font-size: 3.5rem;
+      font-size: 3.75rem;
       text-align: right;
     }
   }
@@ -249,8 +235,6 @@ body {
     text-shadow: 0 0 2em black;
   }
 }
-
-.alternate { font-family: 'Montserrat Alternates', $font-stack-system, sans-serif; }
 
 .main {
   flex: 1;
