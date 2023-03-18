@@ -101,15 +101,13 @@ $breakpoints: (
 
 @font-face {
   font: {
-    family: 'Montserrat';
+    family: 'Galano Grotesque';
     style: normal;
     weight: 400;
     display: fallback;
   }
 
-  src: local('Montserrat Regular'),
-    local('Montserrat-Regular'),
-    url('../assets/fonts/montserrat.woff2') format('woff2');
+  src: url('../assets/fonts/galanogrotesque-regular-webfont.woff2') format('woff2');
 }
 
 @font-face {
@@ -120,9 +118,7 @@ $breakpoints: (
     display: fallback;
   }
 
-  src: local('Galano Grotesque Bold'),
-    local('GalanoGrotesque-Bold'),
-    url('../assets/fonts/galano-grotesque-700.woff2') format('woff2');
+  src: url('../assets/fonts/galanogrotesque-bold-webfont.woff2') format('woff2');
 }
 
 html { height: 100%; }
@@ -133,7 +129,7 @@ body {
   margin: 0;
   min-height: 100%;
   color: white;
-  font-family: Montserrat, $font-stack-system, sans-serif;
+  font-family: 'Galano Grotesque', $font-stack-system, sans-serif;
   line-height: 1.4;
 }
 
@@ -204,7 +200,6 @@ body {
     flex: 1;
     margin: 0;
     font-size: 2.75rem;
-    font-family: 'Galano Grotesque', Montserrat, $font-stack-system, sans-serif;
     line-height: 1;
     letter-spacing: -.02em;
 
